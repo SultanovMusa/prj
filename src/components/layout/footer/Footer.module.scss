@@ -1,0 +1,21 @@
+.footer {
+	margin-top: 380px;
+	.car {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px;
+		backdrop-filter: blur(5px);
+		box-shadow: 15px 5px 15px 20px rgb(7, 2, 105);
+		width: 225vh;
+		height: 50px;
+
+		p:hover {
+			cursor: pointer;
+			text-shadow: 15px 10px 2px rgb(10, 230, 230);
+		}
+		.link {
+			font-size: 25px;
+		}
+	}
+}

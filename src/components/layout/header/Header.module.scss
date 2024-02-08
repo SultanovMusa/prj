@@ -1,0 +1,94 @@
+.content {
+	display: flex;
+	justify-content: space-around;
+	gap: 20px;
+	align-items: center;
+	padding: 10px;
+	backdrop-filter: blur(1px);
+
+	box-shadow: 5px 5px 35px 5px rgb(52, 2, 216);
+	width: 225vh;
+	height: 70px;
+
+	.nav {
+		ul {
+			margin-top: 30px;
+			gap: 100px;
+			list-style: none;
+			display: flex;
+			justify-content: space-around;
+		}
+		.lis {
+			text-decoration: dotted;
+			font-size: 22px;
+			color: white;
+			cursor: pointer;
+		}
+		.lis:hover {
+			box-shadow: 0 5 0 0px rgb(33, 2, 135);
+			transition: 1s;
+			color: #646cff;
+		}
+	}
+	button {
+		height: 30px;
+		margin-bottom: 40px;
+		--primary-color: #645bff;
+		--secondary-color: #fff;
+		--hover-color: #111;
+		--arrow-width: 10px;
+		--arrow-stroke: 2px;
+		box-sizing: border-box;
+		border: 0;
+		border-radius: 20px;
+		color: var(--secondary-color);
+		padding: 1em 1.8em;
+		background: var(--primary-color);
+		display: flex;
+		transition: 0.2s background;
+		align-items: center;
+		gap: 0.6em;
+		font-weight: bold;
+	}
+
+	button .arrow_wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	button .arrow {
+		margin-top: 1px;
+		width: var(--arrow-width);
+		background: var(--primary-color);
+		height: var(--arrow-stroke);
+		position: relative;
+		transition: 0.2s;
+	}
+
+	button .arrow::before {
+		content: "";
+		box-sizing: border-box;
+		position: absolute;
+		border: solid var(--secondary-color);
+		border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+		display: inline-block;
+		top: -3px;
+		right: 3px;
+		transition: 0.2s;
+		padding: 3px;
+		transform: rotate(-45deg);
+	}
+
+	button:hover {
+		background-color: var(--hover-color);
+	}
+
+	button:hover .arrow {
+		background: var(--secondary-color);
+	}
+
+	button:hover .arrow:before {
+		right: 0;
+	}
+}
